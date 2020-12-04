@@ -7,5 +7,10 @@ export default function Image({ url }) {
 }
 
 const ImageComponent = styled.img`
-  max-width: 50vh;
+  max-width: 50vw;
+  max-height: 75vh;
+
+  @media (max-width: 768px) {
+    max-width: 75vw;
+  }
 `;

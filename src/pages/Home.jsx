@@ -3,6 +3,7 @@ import axios from "axios";
 import styled from "styled-components"
 import Navbar from "../components/Navbar"
 import Image from "../components/Image";
+import Button from "../components/Button";
 
 export default function App() {
   let [imageURL, setImageURL] = useState(null);
@@ -20,6 +21,7 @@ export default function App() {
       <Navbar />
       <ImageContainer>
         {imageURL ? <Image url={imageURL} /> : <h2>Loading..</h2>}
+        <Button text="Regenerate" onClick={getCatImage} />
       </ImageContainer>
     </Container>
   );
@@ -37,4 +39,5 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 80vh;
+  margin: 1rem;
 `;
